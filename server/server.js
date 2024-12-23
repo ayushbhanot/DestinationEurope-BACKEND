@@ -124,6 +124,14 @@ app.get("/test-db", async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send(`
+    <h1>Backend is running!</h1>
+    <p>API Base URL: <a href="${process.env.APP_BASE_URL}/api">${process.env.APP_BASE_URL}/api</a></p>
+  `);
+});
+
+
 // server.js
 
 /* OLD Email verification route (correct location)
